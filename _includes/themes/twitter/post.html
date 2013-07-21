@@ -1,10 +1,58 @@
 <div class="page-header">
-  <h1>{{ page.title }} <small>Supporting tagline</small></h1>
+  <h1>{{ page.title }} <small>{{ page.tagline }}</small></h1>
 </div>
 
 <div class="row">
   <div class="span10">
     {{ content }}
+
+
+<!-- add by Marchbell -->
+  <hr/>
+    
+  	订阅到邮箱
+    <br/>
+    <!--以下是QQ邮件列表订阅嵌入代码-->
+    <a rel="nofollow" target="_blank" href="http://list.qq.com/cgi-bin/qf_invite?id=9470cda4ab8e31116b60ca9011bc7991511661b78345faed"><img border="0" alt="填写您的邮件地址，订阅我们的精彩内容：" src="http://rescdn.list.qq.com/zh_CN/htmledition/images/qunfa/manage/picMode_light_m.png" /></a>
+    <hr/>
+
+    <wb:bulkfollow uids="{{ page.uids }},1361535293,3211605684,3468511964" type="1" height="200" count="5" color="C2D9F2,FFFFFF,0082CB,666666" info="n"></wb:bulkfollow>
+    
+    <script type="text/javascript">
+        var lnks = document.getElementById("article").getElementsByTagName("a");
+        for(var i = 0; i < lnks.length; i++){
+            lnks[i].target = "_blank";
+            lnks[i].className = "external";            
+        }
+    </script>
+    <script type="text/javascript" id="wumiiRelatedItems"></script>
+    <script type="text/javascript">
+    var wumiiPermaLink = "";
+    var wumiiTitle = "";
+    var wumiiTags = "";
+    var wumiiSitePrefix = "http://justjavac.com/";
+    var wumiiParams = "&num=5&mode=3&pf=JAVASCRIPT";
+</script>
+<script type="text/javascript" src="http://widget.wumii.com/ext/relatedItemsWidget"></script>
+<a rel="nofollow" href="http://www.wumii.com/widget/relatedItems" style="border:0;">
+    <img src="http://static.wumii.cn/images/pixel.png" alt="无觅相关文章插件，快速提升流量" style="border:0;padding:0;margin:0;" />
+</a>    
+    <hr>
+    <!-- Duoshuo Comment BEGIN -->
+    <div class="ds-thread"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"justjavac"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = 'http://static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+        || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+<!-- Duoshuo Comment END -->
+
     <hr>
     <div class="pagination">
       <ul>
@@ -26,15 +74,19 @@
   </div>
   
   <div class="span4">
-    <h4>Published</h4>
+    <h4>发布日期</h4>
     <div class="date"><span>{{ page.date | date_to_long_string }}</span></div>
 
   {% unless page.tags == empty %}
-    <h4>Tags</h4>
+    <h4>标签</h4>
     <ul class="tag_box">
     {% assign tags_list = page.tags %}
     {% include JB/tags_list %}
     </ul>
   {% endunless %}  
   </div>
+
+  <aside class="span4">
+<section><h3><a href="https://www.google.com">Google搜索</a></h3></section>
+  </aside>
 </div>

@@ -6,11 +6,13 @@ exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 auto: true
 pygments: true
 
+paginate: 20
+
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : Marchbell's Blog
-tagline: Site Tagline
+title : Marchbell
+tagline: 乱花渐欲迷人眼，浅草才能没马蹄
 author :
   name : Marchbell
   email : cmarchbell@gmail.com
@@ -26,7 +28,8 @@ author :
 # Else if you are pushing to username.github.io, replace with your username.
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
 #
-production_url : http://username.github.io
+#production_url : http://username.github.io
+production_url : http://marchbell.com
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
@@ -83,7 +86,7 @@ JB :
   comments :
     provider : disqus
     disqus :
-      short_name : jekyllbootstrap
+      short_name : Marchbell 
     livefyre :
       site_id : 123
     intensedebate :
